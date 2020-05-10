@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "isBackground": true,
+      "command": "php -S 0.0.0.0:8000 -t public",
+      "label": "artisan",
+      "presentation": {
+        "echo": false,
+        "reveal": "never",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false
+      },
+      "problemMatcher": {
+        "pattern": [
+          {
+            "regexp": "!!!DO NOT MATCH ME!!!",
+            "file": 1,
+            "location": 2,
+            "message": 3
+          }
+        ],
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "^Development Server started.+$",
+          "endsPattern": "^Press Ctrl-C to quit.+$"
+        }
+      },
+      "promptOnClose": false
+    }
+  ]
+}
