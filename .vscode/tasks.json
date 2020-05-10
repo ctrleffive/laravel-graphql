@@ -4,7 +4,7 @@
     {
       "type": "shell",
       "isBackground": true,
-      "command": "php -S 0.0.0.0:8000 -t public",
+      "command": "php -dxdebug.remote_enable=1 -dxdebug.remote_autostart=on -dxdebug.remote_mode=req -dxdebug.remote_port=9000 -dxdebug.remote_host=127.0.0.1 artisan serve",
       "label": "artisan",
       "presentation": {
         "echo": false,
@@ -24,8 +24,8 @@
         ],
         "background": {
           "activeOnStart": true,
-          "beginsPattern": "^Development Server started.+$",
-          "endsPattern": "^Press Ctrl-C to quit.+$"
+          "beginsPattern": "^.+$",
+          "endsPattern": "^Laravel development server started.+$"
         }
       },
       "promptOnClose": false
